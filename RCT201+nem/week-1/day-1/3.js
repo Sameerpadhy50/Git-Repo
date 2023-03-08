@@ -1,0 +1,5 @@
+const os=require('os')
+console.log(os.cpus().length)
+console.log(os.uptime())
+console.log(os.version())
+console.log(os.platform())
