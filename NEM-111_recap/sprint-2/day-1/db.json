@@ -1,0 +1,32 @@
+{
+    "students": [
+        {
+            "name": "sameeer",
+            "state": "odisha"
+        },
+        {
+            "name": "ashish",
+            "state": "Hydarbad"
+        }
+    ],
+    "teacher": [
+        {
+            "name": "Bhutpret",
+            "email": "sameer@gmail.com",
+            "password": "aam",
+            "isAdmin": true
+        },
+        {
+            "name": "amar",
+            "email": "sameer@gmail.com",
+            "password": "sam",
+            "isAdmin": true
+        },
+        {
+            "name": "rajnish",
+            "email": "sameer@gmail.com",
+            "password": "sam",
+            "isAdmin": true
+        }
+    ]
+}
