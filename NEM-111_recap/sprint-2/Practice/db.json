@@ -1,0 +1,22 @@
+{
+    "actor": [
+        {
+            "name": "Ramcharan",
+            "movie": "RRR"
+        },
+        {
+            "name": "Alu",
+            "movie": "Dj"
+        }
+    ],
+    "director": [
+        {
+            "name": "Hirani",
+            "movie": "PK"
+        },
+        {
+            "name": "Raja",
+            "movie": "RRR"
+        }
+    ]
+}
