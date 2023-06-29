@@ -1,0 +1,12 @@
+{
+    "movies":[
+        {   "id":1,
+            "name":"RRR",
+            "director":"Raja"
+        },
+        {   "id":2,
+            "name":"Dhoom",
+            "director":"YRF"
+        }
+    ]
+}

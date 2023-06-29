@@ -1,8 +1,8 @@
-const express = require("express")
-const app=express()
-const StudentRoute= require("./routes/students.route")
-const fs=require("fs")
-const {logger}=require('./middlewear/logger.middlewear')
+const express = require("express");
+const app = express();
+const StudentRoute = require("./routes/students.route");
+const fs = require("fs");
+const { logger } = require("./middlewear/logger.middlewear");
 
 //Pre-Class assignment
 // app.use((req,res,next)=>{
@@ -16,18 +16,42 @@ const {logger}=require('./middlewear/logger.middlewear')
 // console.log("Bye from MiddleWear")
 // })
 
+//app.use(logger)
 
+app.get("/", (req, res) => {
+  res.send("Home Page");
+  console.log("This is Home Page");
+});
+// app.get("/search", (req, res) => {
+//  const data=JSON.parse(fs.readFileSync("./db.json","utf-8"))
+//  let result=data.movies.filter((ele)=>{return ele.name==req.query.movie})
+//  if(result.length>0){
+//   console.log(result)
+//   res.send(result[0])
+//  }
+//  else{
+//   console.log('Invalid Search')
+//   res.send("NO Movie Found")
+//  }
+// //console.log(result)
+//   // res.send("This is the search result");
+// });
 
-    app.use(logger)
+app.get('/search/:id',(req,res)=>{
+  const {id}=req.params
+  const data=JSON.parse(fs.readFileSync("./db.json","utf-8"))
+  
 
-app.get("/",(req,res)=>{
-    res.send("Home Page")
-    console.log("This is Home Page")
+  const ans=data.movies.filter((ele)=>{
+    if(ele.id==id){
+      return ele.name
+    }
+  })
+  console.log(ans)
+res.send("New Params")
 })
 
-
-
-app.use("/student",StudentRoute)
-app.listen(8989,()=>{
-    console.log('Server Run ata 8989')
-})
+app.use("/student", StudentRoute);
+app.listen(8989, () => {
+  console.log("Server Run ata 8989");
+});
