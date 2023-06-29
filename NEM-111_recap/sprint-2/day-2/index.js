@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 // });
 
 app.get('/search/:id',(req,res)=>{
-  const {id}=req.params
+  const id=req.params.id
   const data=JSON.parse(fs.readFileSync("./db.json","utf-8"))
   
 
