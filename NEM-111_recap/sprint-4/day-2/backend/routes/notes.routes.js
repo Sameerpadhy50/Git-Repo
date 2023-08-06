@@ -1,6 +1,7 @@
 const express = require("express");
 const noteRouter = express.Router();
 const { NoteModel } = require("../models/note.model");
+const {auth}=require("../middleware/auth.middleware.js")
 
 noteRouter.get("/", async (req, res) => {
   try {
@@ -10,7 +11,7 @@ noteRouter.get("/", async (req, res) => {
     res.status(400).send({ msg: err.message });
   }
 });
-noteRouter.post("/add", async (req, res) => {
+noteRouter.post("/add", auth,async (req, res) => {
   const payload = req.body;
   try {
     const note = new NoteModel(payload);

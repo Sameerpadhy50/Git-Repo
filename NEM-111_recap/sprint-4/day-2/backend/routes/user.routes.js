@@ -22,7 +22,7 @@ userRouter.post("/login", async (req, res) => {
   let { email, pass } = req.body;
   try {
     let user = await UserModel.findOne({ email });
-    console.log(user);
+    // console.log(user);
 
     bcrypt.compare(pass, user.pass, (err, result) => {
       if (result) {
@@ -30,7 +30,7 @@ userRouter.post("/login", async (req, res) => {
           .status(200)
           .send({
             msg: "Login Sucessful",
-            token: jwt.sign({ name: "sameer" }, "masai"),
+            token: jwt.sign({ user_id:user._id}, "masai"),
           });
       } else {
         res.status(400).send({ msg: "Not a authenticated" });
