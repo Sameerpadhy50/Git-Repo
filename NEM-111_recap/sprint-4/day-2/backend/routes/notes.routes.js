@@ -2,11 +2,22 @@ const express = require("express");
 const noteRouter = express.Router();
 const { NoteModel } = require("../models/note.model");
 const {auth}=require("../middleware/auth.middleware.js")
+const jwt=require("jsonwebtoken")
 
-noteRouter.get("/", async (req, res) => {
+noteRouter.get("/",auth,async (req, res) => {
+  const token=req.headers.authorization
+  const decoded=jwt.verify(token,"masai")
+   const userID=decoded.user_id
+   console.log("TIke",userID)
   try {
-    const data = await NoteModel.find();
-    res.status(200).send(data);
+    if(decoded.user_id){
+      const data = await NoteModel.find({"user_id":userID});
+      res.status(200).send(data);
+    }
+    else{
+      res.status(200).send({"msg":"NO notes added by the user"});
+    }
+    
   } catch {
     res.status(400).send({ msg: err.message });
   }

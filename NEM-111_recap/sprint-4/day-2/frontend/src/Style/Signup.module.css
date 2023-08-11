@@ -1,0 +1,25 @@
+.main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Add width and height if needed */
+    width: 500px;
+       height: 300px;
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+input{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    
+}
+button{
+    background-color: aquamarine;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
