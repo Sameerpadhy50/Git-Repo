@@ -4,7 +4,7 @@ import { AllTodos } from "./AllTodos";
 import axios from "axios";
 
 export const TodoApp = () => {
-  const [todo, setTodo] = useState([]);
+  const [todo, setTodo] = useState(null);
 
   const Getdata=()=>{
     axios.get("http://localhost:5400/todos").then((res)=>(console.log(res),setTodo(res.data))).catch((err)=>console.log(err))
@@ -21,7 +21,7 @@ export const TodoApp = () => {
     };
     axios
       .post("http://localhost:5400/todos", payload)
-      .then((res) =>{ console.log(res.data), Getdata()})
+      .then((res) =>{  Getdata()})
       .catch((err) => console.log(err));
      
   };
