@@ -4,14 +4,15 @@ import { Counter } from './Components/Counter';
 import { TodoApp } from './Day-2/TodoApp';
 import { QuotesApp } from './Day-2/QuotesApp';
 import { Login } from './Day-2/Login';
+import { Payment } from './Day-2/Payment';
+import { AllRoutes } from './Routes/AllRoutes';
+import { Navbar } from './Day-2/Navbar';
 
 function App() {
   return (
     <div className="App">
-      {/* <TodoApp/> */}
-      {/* <TodoApp/> */}
-      {/* <QuotesApp/> */}
-      <Login/>
+      <Navbar/>
+      <AllRoutes/>
     </div>
   );
 }

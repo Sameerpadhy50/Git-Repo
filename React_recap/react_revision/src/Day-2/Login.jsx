@@ -1,11 +1,12 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AppContext } from "../Context/AppContextProvider";
 
 export const Login = () => {
+  const { auth, token, login, logout } = useContext(AppContext);
   const [email, setEmail] = useState("");
   const [password, setPass] = useState("");
-  const [auth, setAuth] = useState(false);
-  const [token, setToken] = useState("");
+
   const handleLogin = () => {
     if (!email || !password) {
       alert("Please Provide Both the Credential");
@@ -17,25 +18,19 @@ export const Login = () => {
     };
     axios
       .post("https://reqres.in/api/login", payload)
-      .then(
-        (res) => (
-          alert("login Done"),
-          setAuth(true),
-          console.log(res.data.token),
-          setToken(res.data.token)
-        )
-      )
+      .then((res) => (alert("login Done"), login(res.data.token)))
       .catch((err) => console.log(err));
   };
-  const handleLogout=()=>{
-    setAuth(false)
-    setToken("")
-  }
+  const handleLogout = () => {
+    logout();
+  };
   if (auth) {
-    return(<div>
+    return (
+      <div>
         <h1>The Token is-{token}</h1>
         <button onClick={handleLogout}>Logout</button>
-    </div>)
+      </div>
+    );
   }
   return (
     <div style={{ textAlign: "center", alignItems: "center" }}>
