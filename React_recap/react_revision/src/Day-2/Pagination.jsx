@@ -1,15 +1,17 @@
 import React from "react";
 
-export const Pagination = ({skip,handleClick,quotes}) => {
+export const Pagination = ({skip,handlePageChange,quotes,limit}) => {
+   
+ 
 
-const page=skip/5+1
+const page= skip/limit +1
 
 
   return (
     <div>
-      <button disabled={skip<=0} onClick={()=>handleClick(skip-5)}>Previous</button>
+      <button disabled={skip<=0} onClick={()=>handlePageChange(skip-limit)}>Previous</button>
       <button>{page}</button>
-      <button onClick={()=>handleClick(skip+5)}>Next</button>
+      <button onClick={()=>handlePageChange(skip+limit)}>Next</button>
     </div>
   );
 };

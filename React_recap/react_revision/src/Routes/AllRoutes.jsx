@@ -4,6 +4,9 @@ import { Login } from "../Day-2/Login";
 import { TodoApp } from "../Day-2/TodoApp";
 import { QuotesApp } from "../Day-2/QuotesApp";
 import { Payment } from "../Day-2/Payment";
+import { ProductsPage } from "../Pages/ProductsPage";
+import { PrivateRoutes } from "./PrivateRoutes";
+import { SingleProduct } from "../Pages/SingleProduct";
 
  export const AllRoutes = () => {
   return (
@@ -11,8 +14,10 @@ import { Payment } from "../Day-2/Payment";
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/todo" element={<TodoApp />} />
-      <Route path="/quotes" element={<QuotesApp />} />
+      <Route path="/quotes" element={<PrivateRoutes><QuotesApp /></PrivateRoutes>} />
       <Route path="/payment" element={<Payment />} />
+      <Route path="/product" element={<ProductsPage />} />
+      <Route path="/product/:id" element={<SingleProduct/>} />
     </Routes>
   );
 };
