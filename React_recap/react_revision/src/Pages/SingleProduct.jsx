@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import style from "../styles/SingleProduct.module.css";
 
 export const SingleProduct = () => {
   const { id } = useParams();
@@ -21,32 +22,23 @@ export const SingleProduct = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        gap: "20px",
-        alignItem: "center",
-        justifyContent: "center",
-        paddingTop: "100px",
-      }}
-    >
+    <div id={style.main_div}>
       <br />
       <br />
       <br />
-
-      <div>
+      <div id={style.first}>
+        {data.images && data.images.map((image) => <img src={image} />)}
+      </div>
+      <div id={style.second}>
         <img src={data.thumbnail} alt="" />
       </div>
-      <div>
+      <div id={style.third}> 
         <h2>{data.title}</h2>
         <h4>{data.brand}</h4>
         <p>{data.description}</p>
         <p>
           Price<b>{data.price}</b>
         </p>
-      </div>
-      <div>
-        {data.images && data.images.map((image) => <img src={image} />)}
       </div>
     </div>
   );

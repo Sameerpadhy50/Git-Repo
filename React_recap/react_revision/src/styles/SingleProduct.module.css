@@ -1,0 +1,28 @@
+#main_div{
+    
+        display: grid;
+        grid-template-columns: 30% 30% 40%;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        width: 100%;
+        outline: auto;
+        margin: auto;
+      
+}
+#first{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid red;
+   
+}
+#first img{
+    width: 50%;
+}
+#second{
+    outline: auto;
+}
+#third{
+    outline: auto;
+}
