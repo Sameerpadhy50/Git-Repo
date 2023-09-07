@@ -5,7 +5,7 @@ const reducer=(state,action)=>{
         case "ADD_COUNT":
             return {...state,counter:state.counter+1};
             case "REDUCE_COUNT":
-                return {...state,counter:state.counter+1};
+                return {...state,counter:state.counter-1};
                  default:
                     return state
         }
@@ -21,6 +21,7 @@ export const Counter = () => {
     const [state,dispatch]=useReducer(reducer,store)
   return (
     <div>
+        <h1>Counter useReducer</h1>
         <h4>Counts-{state.counter}</h4>
         <button onClick={()=>{dispatch({type:"ADD_COUNT"})}}>Add Count</button>
         <button onClick={()=>{dispatch({type:"REDUCE_COUNT"})}}>Reduce Count</button>

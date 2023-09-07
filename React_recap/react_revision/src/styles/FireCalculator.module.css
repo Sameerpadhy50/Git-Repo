@@ -1,0 +1,38 @@
+#main{
+    
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 100px;
+}
+#content{
+    display: flex;
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+    gap: 50px;
+
+}
+h1{
+    text-decoration: underline;
+    text-underline-offset: 8px;
+
+}
+#content >div:nth-child(1){
+    border: 2px solid wheat;
+    padding: 30px;
+}
+#content >div:nth-child(1)>input{
+    width: 200px;
+    height: 25px;
+    margin-bottom: 7px;
+    border-radius: 7px;
+}
+#content >div:nth-child(2){
+    text-align: center;
+    width: 80%;
+    border: 2px solid wheat;
+}
+.left{
+    width: 20%;
+}

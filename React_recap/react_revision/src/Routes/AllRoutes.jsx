@@ -8,6 +8,7 @@ import { ProductsPage } from "../Pages/ProductsPage";
 import { PrivateRoutes } from "./PrivateRoutes";
 import { SingleProduct } from "../Pages/SingleProduct";
 import { Counter } from "../Day-2/Counter";
+import { FireCalculator } from "../Pages/FireCalculator";
 
  export const AllRoutes = () => {
   return (
@@ -18,6 +19,7 @@ import { Counter } from "../Day-2/Counter";
       <Route path="/todo" element={<TodoApp />} />
       <Route path="/quotes" element={<PrivateRoutes><QuotesApp /></PrivateRoutes>} />
       <Route path="/payment" element={<Payment />} />
+      <Route path="/fire" element={<FireCalculator/>} />
       <Route path="/product" element={<ProductsPage />} />
       <Route path="/product/:id" element={<SingleProduct/>} />
     </Routes>

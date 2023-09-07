@@ -26,6 +26,7 @@ export const Navbar = () => {
           <Link to="/todo">
             <li>Todo</li>
           </Link>
+          <Link to="/fire"><li>FireCalculator</li></Link>
           <Link to="/login">
             <li>Login</li>
           </Link>
