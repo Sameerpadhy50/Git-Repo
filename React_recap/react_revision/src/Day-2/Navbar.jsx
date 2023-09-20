@@ -11,6 +11,10 @@ export const Navbar = () => {
       </div>
       <div id={style.second}>
         <ul>
+        <Link to="/login1">
+            <li>LoginRd</li>
+          </Link>
+
           <Link to="/counter">
             <li>Counter</li>
           </Link>

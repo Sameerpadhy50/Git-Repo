@@ -1,0 +1,18 @@
+#main {
+  border: 2px solid rgb(34, 2, 2);
+  width: 30%;
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+ 
+}
+#parent{
+    text-align: center;
+    
+}
+
+
