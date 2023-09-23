@@ -34,6 +34,8 @@ export const Navbar = () => {
           <Link to="/login">
             <li>Login</li>
           </Link>
+          <Link to="/cart">
+          <li>Cart</li></Link>
         </ul>
       </div>
     </div>

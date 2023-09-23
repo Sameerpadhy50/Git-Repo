@@ -10,6 +10,7 @@ import { SingleProduct } from "../Pages/SingleProduct";
 import { Counter } from "../Day-2/Counter";
 import { FireCalculator } from "../Pages/FireCalculator";
 import { LoginRed } from "../Pages/LoginRed";
+import { CartPage } from "../Pages/CartPage";
 
  export const AllRoutes = () => {
   return (
@@ -24,6 +25,7 @@ import { LoginRed } from "../Pages/LoginRed";
       <Route path="/fire" element={<FireCalculator/>} />
       <Route path="/product" element={<ProductsPage />} />
       <Route path="/product/:id" element={<SingleProduct/>} />
+      <Route path="/cart" element={<CartPage/>}/>
     </Routes>
   );
 };

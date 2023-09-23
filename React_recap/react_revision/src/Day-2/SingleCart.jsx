@@ -24,12 +24,9 @@ export const SingleCart = ({
         <h6>{brand}</h6>
          <p>{category}</p>
         {/* <p>{description}</p> */}
-        <p>Price:-{price}</p>
+        <p>Price:-{price}₹</p>
       </div>
-      <div style={{display:"flex",gap:"2px",justifyContent:"space-around"}}>
-        <button style={{backgroundColor:"red",color:"white",padding:"5px",border:"none",borderRadius:"5px"}}>Add To Cart</button>
-        <button style={{backgroundColor:"red",color:"white",padding:"5px",border:"none",borderRadius:"5px"}}>Buy Now</button>
-      </div>
+      
       <br />
       
     </div>
