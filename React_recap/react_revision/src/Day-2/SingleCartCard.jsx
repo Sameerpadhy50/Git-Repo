@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const SingleCartCard = ({id,title,price,thumbnail}) => {
+export const SingleCartCard = ({id,title,price,thumbnail,Qty}) => {
   return (
     <div>
         <div><img src={thumbnail} alt="" /></div>
@@ -8,7 +8,7 @@ export const SingleCartCard = ({id,title,price,thumbnail}) => {
        <div><p>{price}</p></div>
        <div>
         <button>-</button>
-        <p>1</p>
+        <p>{Qty}</p>
         <button>+</button>
        </div>
     </div>

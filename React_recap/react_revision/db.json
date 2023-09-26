@@ -8,41 +8,39 @@
   ],
   "cart": [
     {
-      "id": 31,
-      "title": "Mornadi Velvet Bed",
-      "description": "Mornadi Velvet Bed Base with Headboard Slats Support Classic Style Bedroom Furniture Bed Set",
-      "price": 40,
-      "discountPercentage": 17,
-      "rating": 4.16,
-      "stock": 140,
-      "brand": "Furniture Bed Set",
-      "category": "furniture",
-      "thumbnail": "https://i.dummyjson.com/data/products/31/thumbnail.jpg",
+      "id": 3,
+      "title": "Samsung Universe 9",
+      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249,
+      "discountPercentage": 15.46,
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
       "images": [
-        "https://i.dummyjson.com/data/products/31/1.jpg",
-        "https://i.dummyjson.com/data/products/31/2.jpg",
-        "https://i.dummyjson.com/data/products/31/3.jpg",
-        "https://i.dummyjson.com/data/products/31/4.jpg",
-        "https://i.dummyjson.com/data/products/31/thumbnail.jpg"
-      ]
+        "https://i.dummyjson.com/data/products/3/1.jpg"
+      ],
+      "Qty": 9
     },
     {
-      "id": 32,
-      "title": "Sofa for Coffe Cafe",
-      "description": "Ratttan Outdoor furniture Set Waterproof  Rattan Sofa for Coffe Cafe",
-      "price": 50,
-      "discountPercentage": 15.59,
-      "rating": 4.74,
-      "stock": 30,
-      "brand": "Ratttan Outdoor",
-      "category": "furniture",
-      "thumbnail": "https://i.dummyjson.com/data/products/32/thumbnail.jpg",
+      "id": 2,
+      "title": "iPhone X",
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      "price": 899,
+      "discountPercentage": 17.94,
+      "rating": 4.44,
+      "stock": 34,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
       "images": [
-        "https://i.dummyjson.com/data/products/32/1.jpg",
-        "https://i.dummyjson.com/data/products/32/2.jpg",
-        "https://i.dummyjson.com/data/products/32/3.jpg",
-        "https://i.dummyjson.com/data/products/32/thumbnail.jpg"
-      ]
+        "https://i.dummyjson.com/data/products/2/1.jpg",
+        "https://i.dummyjson.com/data/products/2/2.jpg",
+        "https://i.dummyjson.com/data/products/2/3.jpg",
+        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+      ],
+      "Qty": 2
     }
   ]
 }
